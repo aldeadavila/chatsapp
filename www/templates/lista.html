@@ -1,0 +1,18 @@
+<ion-view view-title="Aldeadávila de la Ribera">
+  <ion-content>
+
+    <div class="list">
+
+      <a ng-repeat="item in items" 
+         href="#{{item.url}}"
+         class="item item-thumbnail-left">
+
+        <img ng-src="{{ item.image }}">
+        <h2>{{ item.principal }}</h2>
+        <h4>{{ item.secundario }}</h4>
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>

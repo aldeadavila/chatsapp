@@ -5,6 +5,24 @@ angular
 function config ($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+    .state('inicio', {
+      url: '/inicio',
+      templateUrl: 'templates/inicio.html',
+      controller: 'InicioCtrl'
+    })
+
+    .state('listado', {
+      url: '/listado',
+      templateUrl: 'templates/lista.html',
+      controller: 'ListaCtrl'
+    })
+
+    .state('dormir', {
+      url: '/dormir',
+      templateUrl: 'templates/dormir.html',
+      controller: 'DormirCtrl'
+    })
+
     .state('tab', {
       url: '/tab',
       abstract: true,
@@ -31,5 +49,5 @@ function config ($stateProvider, $urlRouterProvider) {
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/chats');
+  $urlRouterProvider.otherwise('/inicio');
 }
